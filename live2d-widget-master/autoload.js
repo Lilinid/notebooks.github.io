@@ -1,6 +1,6 @@
 // 注意：live2d_path 参数应使用绝对路径
 //const live2d_path = "https://guohaomeng.gitee.io/live2d-widget/";
-const live2d_path = "/notebooks.github.io/live2d-widget-master/";
+const live2d_path = "https://notebooks.github.io/live2d-widget-master/";
 
 
 
