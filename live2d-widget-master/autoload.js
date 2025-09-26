@@ -1,6 +1,7 @@
 // 注意：live2d_path 参数应使用绝对路径
 //const live2d_path = "https://guohaomeng.gitee.io/live2d-widget/";
- const live2d_path = "/live2d-widget-master/";
+const live2d_path = "/notebooks.github.io/live2d-widget-master/";
+
 
 
 // 封装异步加载资源的方法
@@ -44,25 +45,47 @@ Promise.all([
 // API 后端可自行搭建，参考 https://github.com/fghrsh/live2d_api
 // 初始化看板娘会自动加载指定目录下的 waifu-tips.json
 //自动适应手机与pc
-function autoResize(){
-	var wH = window.innerWidth;
-	var x = document.getElementById("waifu");
-	//console.log(wH);
-	if (wH < 768) {
-		x.style.transformOrigin = "0 100%";
-		x.style.transform = "scale(0.3)";
-	}
-	else{
-		x.style.transformOrigin = "0 100%";
-		x.style.transform = "scale(0.76)";
-	}
+// function autoResize(){
+// 	var wH = window.innerWidth;
+// 	var x = document.getElementById("waifu");
+// 	//console.log(wH);
+// 	if (wH < 768) {
+// 		x.style.transformOrigin = "0 100%";
+// 		x.style.transform = "scale(0.3)";
+// 	}
+// 	else{
+// 		x.style.transformOrigin = "0 100%";
+// 		x.style.transform = "scale(0.76)";
+// 	}
 
+// }
+
+// window.onresize=function(){  
+// 	//console.log('监听变化')
+// 	autoResize();
+// }
+function autoResize(){
+  var wH = window.innerWidth;
+  var x = document.getElementById("waifu");
+  // 添加元素存在性检查
+  if (!x) return;
+  //console.log(wH);
+  if (wH < 768) {
+    x.style.transformOrigin = "0 100%";
+    x.style.transform = "scale(0.3)";
+  }
+  else{
+    x.style.transformOrigin = "0 100%";
+    x.style.transform = "scale(0.76)";
+  }
 }
 
 window.onresize=function(){  
-	//console.log('监听变化')
-	autoResize();
+  //console.log('监听变化')
+  // 添加延时确保DOM已更新
+  setTimeout(autoResize, 100);
 }
+
 console.log(`
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
