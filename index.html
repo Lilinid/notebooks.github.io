@@ -414,13 +414,13 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'https://zj.v.api.aa1.cn/api/wenan-zl/',
+          url: 'http://api.zhyunxi.com/api1.php?api=6&key=705ea7fbf7ce904a67d3cb8095ecda82&type=f',
           headers: {},
           dataType: 'json',
           success: function(result) {
             var apiText;
             if (result) {
-              var keys = 'msg'.split(',');
+              var keys = 'data,motto'.split(',');
               if (result instanceof Array) {
                 result = result[0];
               }
@@ -438,7 +438,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request https://zj.v.api.aa1.cn/api/wenan-zl/:', error);
+              console.error('Failed to request http://api.zhyunxi.com/api1.php?api=6&amp;key=705ea7fbf7ce904a67d3cb8095ecda82&amp;type=f:', error);
             }
             typing(text);
           }
