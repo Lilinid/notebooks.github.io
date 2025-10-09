@@ -447,7 +447,7 @@
       
         jQuery.ajax({
           type: 'GET',
-          url: 'http://api.zhyunxi.com/api1.php?api=6&key=705ea7fbf7ce904a67d3cb8095ecda82&type=f',
+          url: 'https://api.zhyunxi.com/api1.php?api=6&key=705ea7fbf7ce904a67d3cb8095ecda82&type=f',
           headers: {},
           dataType: 'json',
           success: function(result) {
@@ -471,7 +471,7 @@
           },
           error: function(xhr, status, error) {
             if (error) {
-              console.error('Failed to request http://api.zhyunxi.com/api1.php?api=6&amp;key=705ea7fbf7ce904a67d3cb8095ecda82&amp;type=f:', error);
+              console.error('Failed to request https://api.zhyunxi.com/api1.php?api=6&amp;key=705ea7fbf7ce904a67d3cb8095ecda82&amp;type=f:', error);
             }
             typing(text);
           }
